@@ -6,7 +6,7 @@ const App = () => {
 const [state,dispatch] = useReducer(counterReducer,initialValue)
   return (
     <div id="main">
-        <span id="id "counter">Count - {state}</span>
+        <span id="counter">Count - {state}</span>
         <button id="increment-btn" onClick={()=>dispatch("INCREMENT")}>Increment</button>
         <button id="decrement-btn" onClick={()=>dispatch("DECREMENT")}>Decrement</button>
         <button onClick={()=>dispatch("RESET")}>Reset</button>
