@@ -1,15 +1,14 @@
 import React, { useReducer } from 'react'
-import { counterReducer } from '../reducers/counterReducer';
+import { counterReducer , initialState} from '../reducers/counterReducer';
 import '../styles/App.css';
+//let initialValue=0;
 const App = () => {
-  let initialValue=0;
-const [state,dispatch] = useReducer(counterReducer,initialValue)
+const [state,dispatch] = useReducer(counterReducer,initialState)
   return (
     <div id="main">
-        <h1>Count - {state}</h1>
+        <h1>{state}</h1>
         <button onClick={()=>dispatch("INCREMENT")}>Increment</button>
         <button onClick={()=>dispatch("DECREMENT")}>Decrement</button>
-        <button onClick={()=>dispatch("RESET")}>Reset</button>
     </div>
   )
 }

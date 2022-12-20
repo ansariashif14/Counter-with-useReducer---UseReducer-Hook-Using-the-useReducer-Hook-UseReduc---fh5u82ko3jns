@@ -1,15 +1,14 @@
+let initialState=0;
 const counterReducer = (state,action) =>{
-  let initialState=0;
+  
   switch(action)
   {
     case "INCREMENT":
       return state+1;
     case "DECREMENT":
       return state-1;
-    case "RESET":
-      return initialState;
     default:
-      return state;
+      return initialState;
   }
 }
-export {counterReducer}
+export {counterReducer, initialState}
